@@ -112,9 +112,7 @@ describe GraphQL::Language::Printer do
             mutation: MutationType
           }
 
-          """
-          Union description
-          """
+          # Union description
           union AnnotatedUnion @onUnion = A | B
 
           type Foo implements Bar & AnnotatedInterface {
@@ -127,9 +125,7 @@ describe GraphQL::Language::Printer do
             seven(argument: String = null): Type
           }
 
-          """
-          Scalar description
-          """
+          # Scalar description
           scalar CustomScalar
 
           type AnnotatedObject implements Bar @onObject(arg: "value") {
@@ -141,13 +137,9 @@ describe GraphQL::Language::Printer do
             four(argument: String = "string"): String
           }
 
-          """
-          Enum description
-          """
+          # Enum description
           enum Site {
-            """
-            Enum value description
-            """
+            # Enum value description
             DESKTOP
             MOBILE
           }
@@ -158,9 +150,7 @@ describe GraphQL::Language::Printer do
 
           union Feed = Story | Article | Advert
 
-          """
-          Input description
-          """
+          # Input description
           input InputType {
             key: String!
             answer: Int = 42
@@ -170,9 +160,7 @@ describe GraphQL::Language::Printer do
 
           scalar CustomScalar
 
-          """
-          Directive description
-          """
+          # Directive description
           directive @skip(if: Boolean!) on FIELD | FRAGMENT_SPREAD | INLINE_FRAGMENT
 
           scalar AnnotatedScalar @onScalar
